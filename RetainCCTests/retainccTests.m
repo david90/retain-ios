@@ -67,7 +67,8 @@
 - (void)testSendEvent {
     [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
         
-        BOOL shouldApply = [request.URL.absoluteString isEqualToString:@"https://app.retain.cc/api/v1/events"];
+        NSString* urlString = [NSString stringWithFormat:@"%@/api/v1/events",RETAINCC_END_POINT_SERVER];
+        BOOL shouldApply = [request.URL.absoluteString isEqualToString:urlString];
         if (!shouldApply) return NO;
         
         NSDictionary *allHeaders = request.allHTTPHeaderFields;
@@ -159,8 +160,8 @@
     [library identifyWithEmail:@"test@example.com" userID:@"1234" callback:^(BOOL success, NSError *error) {
         [OHHTTPStubs removeAllStubs];
         [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
-            
-            BOOL shouldApply = [request.URL.absoluteString isEqualToString:@"https://app.retain.cc/api/v1/users"];
+            NSString* urlString = [NSString stringWithFormat:@"%@/api/v1/users",RETAINCC_END_POINT_SERVER];
+            BOOL shouldApply = [request.URL.absoluteString isEqualToString:urlString];
             if (!shouldApply) return NO;
             
             NSDictionary *allHeaders = request.allHTTPHeaderFields;

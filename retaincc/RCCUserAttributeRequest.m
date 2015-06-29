@@ -73,7 +73,8 @@
         }
     }
     NSMutableURLRequest *request = [self authedRequestWithJSON:params];
-    [request setURL:[NSURL URLWithString:@"https://app.retain.cc/api/v1/users"]];
+    NSString* urlString = [NSString stringWithFormat:@"%@/api/v1/users",RETAINCC_END_POINT_SERVER];
+    [request setURL:[NSURL URLWithString:urlString]];
     [self sendRequest:request callback:callback];
 }
 
