@@ -87,7 +87,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		63D1BF5E1B41205100E539AC /* retaincc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "retaincc-Prefix.pch"; sourceTree = "<group>"; };
 		CF9A33D119EBC699002DB35F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		CF9A33D219EBC699002DB35F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		CFA402F119E7DFD200F67ADD /* libRetainCC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRetainCC.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +153,6 @@
 				CFA4030C19E7E5B100F67ADD /* RCCEventRequest.m */,
 				CFA4030F19E7E5B100F67ADD /* RCCUserAttributeRequest.h */,
 				CFA4031019E7E5B100F67ADD /* RCCUserAttributeRequest.m */,
-				63D1BF5E1B41205100E539AC /* retaincc-Prefix.pch */,
 				CFA4031719E7E5CB00F67ADD /* Libraries */,
 			);
 			path = RetainCC;
@@ -479,7 +477,7 @@
 		CFA4030619E7DFD200F67ADD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREFIX_HEADER = "RetainCC/retaincc-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
@@ -490,7 +488,7 @@
 		CFA4030719E7DFD200F67ADD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREFIX_HEADER = "RetainCC/retaincc-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
@@ -505,7 +503,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				GCC_PREFIX_HEADER = "RetainCC/retaincc-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -523,7 +521,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				GCC_PREFIX_HEADER = "RetainCC/retaincc-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = RetainCCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

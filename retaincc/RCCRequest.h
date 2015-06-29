@@ -5,6 +5,7 @@
 //  Created by b123400 on 3/10/14.
 //  Copyright (c) 2014 oursky. All rights reserved.
 //
+#define RETAINCC_END_POINT_SERVER @"nightly.retain.cc"
 
 #import <Foundation/Foundation.h>
 
